@@ -28,7 +28,7 @@ if ($id === null) {
 require_once 'header.inc.php';
 ?>
 <div>
-    <h2>Show Customer</h2>
+    <h2>Show Criminal</h2>
     <?php
 
     // Create connection
@@ -40,8 +40,7 @@ require_once 'header.inc.php';
     }
 
 	// Prepare SQL using Parameterized Form (Safe from SQL Injections)
-    $sql = "SELECT CustomerNumber,CustomerName,StreetAddress,CityName,StateCode,PostalCode FROM customer C " .
-        "INNER JOIN address A ON C.defaultAddressID = A.addressID WHERE CustomerNumber = ?";
+    $sql = "SELECT criminalID,flyerID,DOB,gender,name,bounty,status,authorityID FROM criminal c " .
     $stmt = $conn->stmt_init();
     if (!$stmt->prepare($sql)) {
         echo "failed to prepare";
@@ -55,7 +54,7 @@ require_once 'header.inc.php';
         $stmt->execute();
 		
 		// Process Results Using Cursor
-        $stmt->bind_result($customerNumber,$customerName,$streetName,$cityName,$stateCode,$postalCode);
+        $stmt->bind_result($criminalID,$flyerID,$DOB,$gender,$name,$bounty,$status,$authorityID);
         echo "<div>";
         while ($stmt->fetch()) {
             echo '<a href="show_criminal.php?id='  . $customerNumber . '">' . $customerName . '</a><br>' .

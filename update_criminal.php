@@ -3,7 +3,7 @@
  * Created by fbi
  */
 require_once 'config.inc.php';
-// Get Customer Number
+// Get CriminalID Number
 $id = $_GET['id'];
 if ($id === "") {
     header('location: list_criminals.php');
@@ -28,7 +28,7 @@ if ($id === null) {
 require_once 'header.inc.php';
 ?>
 <div>
-    <h2>Update Customer</h2>
+    <h2>Update Criminal Status</h2>
     <?php
 
     // Create connection
@@ -51,7 +51,7 @@ require_once 'header.inc.php';
         else {
 			
             /* perform update using safe parameterized sql */
-            $sql = "UPDATE customer SET CustomerName = ? WHERE CustomerNumber = ?";
+            $sql = "UPDATE criminal SET 'status' = ? WHERE criminalID = ?";
             $stmt = $conn->stmt_init();
             if (!$stmt->prepare($sql)) {
                 echo "failed to prepare";
