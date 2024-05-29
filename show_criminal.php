@@ -48,9 +48,9 @@ require_once 'header.inc.php';
             $stmt->bind_result($criminalID, $flyerID, $DOB, $gender, $name, $bounty, $status, $authorityID);
             echo "<div>";
             while ($stmt->fetch()) {
-                echo '<a href="show_criminal.php?id=' . $criminalID . '">' . htmlspecialchars($name) . '</a><br>' .
-                    htmlspecialchars($flyerID) . ', ' . htmlspecialchars($DOB) . ', ' . htmlspecialchars($gender) . ', ' .
-                    htmlspecialchars($bounty) . ', ' . htmlspecialchars($status) . ', ' . htmlspecialchars($authorityID);
+                echo '<a href="show_criminal.php?id=' . $criminalID . '">' . htmlspecialchars($name) . '</a>' . ', ' . htmlspecialchars($status) . ', ' .
+                    htmlspecialchars($DOB) . ', ' . htmlspecialchars($gender) . ', ' .
+                    htmlspecialchars($bounty) . ', ' . htmlspecialchars($flyerID);
                     echo "<div>";
                     echo '<a href="update_criminal.php?criminalID=' . htmlspecialchars($criminalID) . '">Update Criminal</a>';
                     echo "</div>";
