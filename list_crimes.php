@@ -82,10 +82,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "SELECT crimeNo,description,date,location,status,name,witnessCount,criminalID FROM crimes WHERE 1=1";
     if (!empty($city)) {
-        $sql .= " AND location LIKE '%$city%'";
+        $sql .= " AND location LIKE '$city%'";
     }
     if (!empty($state)) {
-        $sql .= " AND location LIKE '%$state%'";
+        $sql .= " AND location LIKE '%$state'";
     }
     if (!empty($from_date) && !empty($to_date)) {
         $sql .= " AND date BETWEEN '$from_date' AND '$to_date'";
