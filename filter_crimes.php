@@ -4,7 +4,6 @@
  */
 require_once 'config.inc.php';
 
-// Get CriminalID Number
 $id = $_GET['criminalID'];
 if ($id === "" || $id === false || $id === null) {
     header('location: show_criminals.php');
@@ -20,29 +19,23 @@ if ($id === "" || $id === false || $id === null) {
 <?php
 require_once 'header.inc.php';
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $database, $port);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $status = $_POST['status'];
-    if ($status === null || $status === false || trim($status) === "") {
-        echo "<div><i>Specify a new status</i></div>";
+    $name = $_POST['name'];
+    if ($name === null || $name === false || trim($name) === "") {
+        echo "<div><i>Specify a new name</i></div>";
     } else {
-        // Perform update using safe parameterized SQL
         $sql = "UPDATE criminal SET status = ? WHERE criminalID = ?";
         $stmt = $conn->prepare($sql);
         if (!$stmt) {
             echo "Failed to prepare statement: " . $conn->error;
         } else {
-            // Bind user input to statement
-            $stmt->bind_param('si', $status, $id);
-            // Execute statement
+            $stmt->bind_param('si', $name, $id);
             if (!$stmt->execute()) {
                 echo "Failed to execute statement: " . $stmt->error;
             } else {
@@ -53,7 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Refresh the Data
 $sql = "SELECT criminalID, flyerID, DOB, gender, name, bounty, status, authorityID FROM criminal WHERE criminalID = ?";
 $stmt = $conn->prepare($sql);
 if (!$stmt) {
@@ -74,7 +66,7 @@ if (!$stmt) {
                 htmlspecialchars($bounty) . ', ' . htmlspecialchars($status) . ', ' . htmlspecialchars($authorityID);
             }
             ?><br><br>
-            New Status: <input type="text" name="status">
+            New Name: <input type="text" name="name">
             <button type="submit">Update</button>
         </form>
     </div>
