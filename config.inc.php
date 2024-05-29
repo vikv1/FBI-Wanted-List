@@ -9,5 +9,5 @@
 $servername = 'vergil.u.washington.edu'; // Your Server (if noot)
 $username = 'root';
 $password = 'fbi';
-$database = 'point_of_sale';
+$database = 'wantedlist';
 $port = 20345; // Your Port
