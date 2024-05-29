@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: MKochanski
- * Date: 7/24/2018
- * Time: 3:37 PM
+ * Created by fbi
  */
 ?>
 <!-- This is a common navigation base to call different web pages on the website -->
