@@ -5,6 +5,7 @@
 require_once 'config.inc.php';
 
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>List of Criminals</title>
@@ -26,26 +27,32 @@ require_once 'header.inc.php';
     }
 
 	// Prepare SQL Statement
-    $sql = "SELECT criminalID,name FROM criminal ORDER BY criminalID";
+    $sql = "SELECT criminalID, name FROM criminal ORDER BY criminalID";
     $stmt = $conn->stmt_init();
     if (!$stmt->prepare($sql)) {
-        echo "failed to prepare (" . $conn->errno . ") " . $conn->error;
+        echo "Failed to prepare statement: " . $stmt->error;
     }
     else {
-		
-		// Execute the Statement
-        $stmt->execute();
-		
-		// Loop Through Result
-        $stmt->bind_result($criminalID,$name);
-        echo "<ul>";
-        while ($stmt->fetch()) {
-            echo '<li><a href="show_criminal.php?id='  . $criminalID . '">' . $name . '</a></li>';
+        // Execute the Statement
+        if (!$stmt->execute()) {
+            echo "Failed to execute statement: " . $stmt->error;
+        } else {
+            // Bind result variables
+            if (!$stmt->bind_result($criminalID, $name)) {
+                echo "Failed to bind result: " . $stmt->error;
+            } else {
+                // Loop Through Result
+                echo "<ul>";
+                while ($stmt->fetch()) {
+                    echo '<li><a href="show_criminal.php?criminalID=' . $criminalID . '">' . htmlspecialchars($name) . '</a></li>';
+                }
+                echo "</ul>";
+            }
         }
-        echo "</ul>";
     }
 
 	// Close Connection
+    $stmt->close();
     $conn->close();
 
     ?>

@@ -4,7 +4,7 @@
  */
 require_once 'config.inc.php';
 // Get criminal Number
-$id = $_GET['id'];
+$id = $_GET['criminalID'];
 if ($id === "") {
     header('location: list_criminals.php');
     exit();
@@ -40,7 +40,7 @@ require_once 'header.inc.php';
     }
 
 	// Prepare SQL using Parameterized Form (Safe from SQL Injections)
-    $sql = "SELECT criminalID,flyerID,DOB,gender,name,bounty,status,authorityID FROM criminal c " .
+    $sql = "SELECT criminalID,flyerID,DOB,gender,name,bounty,status,authorityID FROM criminal WHERE criminalID = ?";
     $stmt = $conn->stmt_init();
     if (!$stmt->prepare($sql)) {
         echo "failed to prepare";
@@ -48,8 +48,7 @@ require_once 'header.inc.php';
     else {
 		
 		// Bind Parameters from User Input
-        $stmt->bind_param('s',$id);
-		
+         $stmt->bind_param('s',$id);
 		// Execute the Statement
         $stmt->execute();
 		
@@ -57,13 +56,13 @@ require_once 'header.inc.php';
         $stmt->bind_result($criminalID,$flyerID,$DOB,$gender,$name,$bounty,$status,$authorityID);
         echo "<div>";
         while ($stmt->fetch()) {
-            echo '<a href="show_criminal.php?id='  . $customerNumber . '">' . $customerName . '</a><br>' .
-             $streetName . ',' . $stateCode . '  ' . $postalCode;
+            echo '<a href="show_criminal.php?id='  . $criminalID . '">' . $name . '</a><br>' .
+             $flyerID . ', ' . $DOB . ', ' . $gender . ', ' . $bounty . ', ' . $status . ', ' . $authorityID;
         }
         echo "</div>";
     ?>
         <div>
-            <a href="update_criminal.php?id=<?= $customerNumber ?>">Update Customer</a>
+            <a href="update_criminal.php?id=<?= $criminalID ?>">Update Criminal</a>
         </div>
     <?php
     }
