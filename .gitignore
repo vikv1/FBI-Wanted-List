@@ -1,4 +1,0 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# don't change the port number when pushing to team repo
-/public_html/FBI-Wanted-List/config.inc.php
