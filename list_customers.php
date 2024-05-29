@@ -29,7 +29,7 @@ require_once 'header.inc.php';
     }
 
 	// Prepare SQL Statement
-    $sql = "SELECT CustomerNumber,CustomerName FROM customer ORDER BY CustomerName";
+    $sql = "SELECT DOB FROM criminal ORDER BY DOB";
     $stmt = $conn->stmt_init();
     if (!$stmt->prepare($sql)) {
         echo "failed to prepare";

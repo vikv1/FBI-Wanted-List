@@ -1,10 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: markk@uw.edu
- * Date: 7/24/2018
- * Time: 2:45 PM
-*/?>
+ * Created by fbi
+ */?>
 <html>
 <head>
     <title>THE FBI</title>
@@ -16,7 +13,8 @@ require_once 'header.inc.php';
 ?>
 <div>
     <h2>About</h2>
-    <div>the fbi bruh</div>
+    <div>A fake FBI database created for a CSS 475 Database Systems class. Look at fake public criminal records and PSAs as a member of the public. 
+        As a fake FBI authority look at crime stats, witness reports, vicitm reports and criminal records in more detail.</div>
 </div>
 </body>
 </html>
