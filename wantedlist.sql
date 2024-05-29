@@ -168,24 +168,24 @@ CREATE TABLE IF NOT EXISTS `criminal` (
 INSERT INTO `criminal` (`criminalID`, `flyerID`, `DOB`, `gender`, `name`, `bounty`, `status`, `authorityID`) VALUES
 (1, 'FLY001', '1980-01-01', 'Male', 'John Doe', '10000', 'Wanted', 1),
 (2, 'FLY002', '1975-02-02', 'Female', 'Jane Smith', '15000', 'Captured', 2),
-(3, 'FLY003', '1982-03-03', 'Male', 'Jake Johnson', '20000', 'Wanted', 3),
-(4, 'FLY004', '1985-04-04', 'Female', 'Emma Brown', '5000', 'Captured', 4),
-(5, 'FLY005', '1990-05-05', 'Male', 'Michael Davis', '25000', 'Wanted', 5),
-(6, 'FLY006', '1988-06-06', 'Female', 'Olivia Wilson', '30000', 'Captured', 6),
-(7, 'FLY007', '1984-07-07', 'Male', 'Liam Martinez', '12000', 'Wanted', 7),
-(8, 'FLY008', '1992-08-08', 'Female', 'Sophia Anderson', '35000', 'Captured', 8),
-(9, 'FLY009', '1978-09-09', 'Male', 'Noah Taylor', '40000', 'Wanted', 9),
-(10, 'FLY010', '1986-10-10', 'Female', 'Ava Thomas', '45000', 'Captured', 10),
-(11, 'FLY011', '1991-11-11', 'Male', 'William Jackson', '5000', 'Wanted', 11),
-(12, 'FLY012', '1983-12-12', 'Female', 'Isabella White', '55000', 'Captured', 12),
-(13, 'FLY013', '1987-01-13', 'Male', 'James Harris', '60000', 'Wanted', 13),
-(14, 'FLY014', '1979-02-14', 'Female', 'Mia Martin', '65000', 'Captured', 14),
-(15, 'FLY015', '1981-03-15', 'Male', 'Benjamin Lee', '70000', 'Wanted', 15),
-(16, 'FLY016', '1989-04-16', 'Female', 'Amelia Perez', '75000', 'Captured', 16),
-(17, 'FLY017', '1993-05-17', 'Male', 'Lucas Thompson', '80000', 'Wanted', 17),
-(18, 'FLY018', '1986-06-18', 'Female', 'Harper Hall', '85000', 'Captured', 18),
-(19, 'FLY019', '1977-07-19', 'Male', 'Henry Young', '90000', 'Wanted', 19),
-(20, 'FLY020', '1994-08-20', 'Female', 'Evelyn King', '95000', 'Captured', 20);
+(3, 'FLY003', '1982-03-03', 'Male', 'Bob Johnson', '20000', 'Wanted', 3),
+(4, 'FLY004', '1985-04-04', 'Female', 'Alice Brown', '5000', 'Captured', 4),
+(5, 'FLY005', '1990-05-05', 'Male', 'Charlie Davis', '25000', 'Wanted', 5),
+(6, 'FLY006', '1988-06-06', 'Female', 'Emily Wilson', '30000', 'Captured', 6),
+(7, 'FLY007', '1984-07-07', 'Male', 'Frank Thomas', '12000', 'Wanted', 7),
+(8, 'FLY008', '1992-08-08', 'Female', 'Grace Martinez', '35000', 'Captured', 8),
+(9, 'FLY009', '1978-09-09', 'Male', 'Henry Lee', '40000', 'Wanted', 9),
+(10, 'FLY010', '1986-10-10', 'Female', 'Isabella Harris', '45000', 'Captured', 10),
+(11, 'FLY011', '1991-11-11', 'Male', 'Jack Walker', '5000', 'Wanted', 11),
+(12, 'FLY012', '1983-12-12', 'Female', 'Karen Hall', '55000', 'Captured', 12),
+(13, 'FLY013', '1987-01-13', 'Male', 'Larry King', '60000', 'Wanted', 13),
+(14, 'FLY014', '1979-02-14', 'Female', 'Mary Scott', '65000', 'Captured', 14),
+(15, 'FLY015', '1981-03-15', 'Male', 'Nick Adams', '70000', 'Wanted', 15),
+(16, 'FLY016', '1989-04-16', 'Female', 'Olivia Clark', '75000', 'Captured', 16),
+(17, 'FLY017', '1993-05-17', 'Male', 'Peter Lewis', '80000', 'Wanted', 17),
+(18, 'FLY018', '1986-06-18', 'Female', 'Quinn Robinson', '85000', 'Captured', 18),
+(19, 'FLY019', '1977-07-19', 'Male', 'Rachel Young', '90000', 'Wanted', 19),
+(20, 'FLY020', '1994-08-20', 'Female', 'Steve Allen', '95000', 'Captured', 20);
 
 
 --
@@ -220,13 +220,13 @@ INSERT INTO `crimes` (`crimeNo`, `description`, `date`, `location`, `status`, `n
 (11, 'Cybercrime', '2024-11-30', 'Austin, TX', 'Unsolved', 'Jack Walker', 2, 11),
 (12, 'Money Laundering', '2024-12-05', 'Jacksonville, FL', 'Solved', 'Karen Hall', 5, 12),
 (13, 'Theft', '2024-01-15', 'Fort Worth, TX', 'Unsolved', 'Larry King', 6, 13),
-(14, 'Store Robbery', '2024-02-20', 'Columbus, OH', 'Solved', 'Mary Scott', 3, 14),
-(15, 'Domestic Terrorism', '2024-03-25', 'Charlotte, NC', 'Unsolved', 'Nick Adams', 8, 15),
+(14, 'Child Exploitation', '2024-02-20', 'Columbus, OH', 'Solved', 'Mary Scott', 3, 14),
+(15, 'Rape', '2024-03-25', 'Charlotte, NC', 'Unsolved', 'Nick Adams', 8, 15),
 (16, 'Weapons Trafficking', '2024-04-30', 'San Francisco, CA', 'Solved', 'Olivia Clark', 4, 16),
 (17, 'Smuggling', '2024-05-05', 'Indianapolis, IN', 'Unsolved', 'Peter Lewis', 7, 17),
 (18, 'Gang Violence', '2024-06-10', 'Seattle, WA', 'Solved', 'Quinn Robinson', 9, 18),
 (19, 'Identity Theft', '2024-07-15', 'Denver, CO', 'Unsolved', 'Rachel Young', 2, 19),
-(20, 'Assault', '2024-08-20', 'Washington, DC', 'Solved', 'Steve Allen', 1, 20);
+(20, 'Armed Robbery', '2024-08-20', 'Washington, DC', 'Solved', 'Steve Allen', 1, 20);
 
 
 
@@ -320,26 +320,26 @@ CREATE TABLE IF NOT EXISTS `victim` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `victim` (`SSN`, `Name`, `Statement`, `Status`, `DOB`, `Gender`, `criminalID`) VALUES
-('123-45-6789', 'Alice Johnson', 'I saw him running away!', 'Survivor', '1980-05-10', 'Female', '1'),
-('234-56-7890', 'Bob Smith', 'He stole my wallet!', 'Survivor', '1975-08-15', 'Male', '2'),
-('345-67-8901', 'Charlie Brown', 'She attacked me!', 'Victim', '1982-03-20', 'Male', '3'),
-('456-78-9012', 'Daisy Green', 'I was mugged!', 'Victim', '1985-06-25', 'Female', '4'),
-('567-89-0123', 'Eve Williams', 'He threatened me!', 'Survivor', '1990-10-30', 'Female', '5'),
-('678-90-1234', 'Frank Davis', 'They broke into my house!', 'Victim', '1988-07-05', 'Male', '6'),
-('789-01-2345', 'Grace Taylor', 'I was assaulted!', 'Victim', '1984-12-15', 'Female', '7'),
-('890-12-3456', 'Harry Brown', 'He attacked me with a knife!', 'Survivor', '1992-09-20', 'Male', '8'),
-('901-23-4567', 'Ivy Lee', 'I was robbed at gunpoint!', 'Victim', '1978-04-05', 'Female', '9'),
+('123-45-6789', 'Alice Johnson', 'I saw him running away!', 'Survivor', '1980-05-10', 'Female', 1),
+('234-56-7890', 'Bob Smith', 'He stole my wallet!', 'Survivor', '1975-08-15', 'Male', 2),
+('345-67-8901', 'Charlie Brown', 'She attacked me!', 'Victim', '1982-03-20', 'Male', 3),
+('456-78-9012', 'Daisy Green', 'I was mugged!', 'Victim', '1985-06-25', 'Female', 4),
+('567-89-0123', 'Eve Williams', 'He threatened me!', 'Survivor', '1990-10-30', 'Female', 5),
+('678-90-1234', 'Frank Davis', 'They broke into my house!', 'Victim', '1988-07-05', 'Male', 6),
+('789-01-2345', 'Grace Taylor', 'I was assaulted!', 'Victim', '1984-12-15', 'Female', 7),
+('890-12-3456', 'Harry Brown', 'He attacked me with a knife!', 'Survivor', '1992-09-20', 'Male', 8),
+('901-23-4567', 'Ivy Lee', 'I was robbed at gunpoint!', 'Victim', '1978-04-05', 'Female', 9),
 ('012-34-5678', 'Jack Martin', 'They stole my car!', 'Victim', '1986-11-10', 'Male', '10'),
-('123-45-6780', 'Katie Clark', 'She vandalized my property!', 'Survivor', '1991-02-15', 'Female', '11'),
-('234-56-7891', 'Liam Hall', 'He threatened me!', 'Victim', '1983-07-20', 'Male', '12'),
-('345-67-8902', 'Mia Garcia', 'I was attacked!', 'Victim', '1979-10-25', 'Female', '13'),
-('456-78-9013', 'Nathan Young', 'He stole my laptop!', 'Survivor', '1987-03-30', 'Male', '14'),
-('567-89-0124', 'Olivia Martinez', 'She assaulted me!', 'Victim', '1981-06-05', 'Female', '15'),
-('678-90-1235', 'Paul Robinson', 'I was mugged!', 'Victim', '1989-09-10', 'Male', '16'),
-('789-01-2346', 'Quinn White', 'He broke into my house!', 'Survivor', '1977-12-20', 'Female', '17'),
-('890-12-3457', 'Ryan King', 'They threatened me with a gun!', 'Victim', '1993-01-25', 'Male', '18'),
-('901-23-4568', 'Samantha Adams', 'I was attacked by a gang!', 'Victim', '1986-04-01', 'Female', '19'),
-('012-34-5679', 'Tyler Scott', 'He stole my wallet!', 'Survivor', '1994-07-10', 'Male', '20');
+('123-45-6780', 'Katie Clark', 'She vandalized my property!', 'Survivor', '1991-02-15', 'Female', 11),
+('234-56-7891', 'Liam Hall', 'He threatened me!', 'Victim', '1983-07-20', 'Male', 12),
+('345-67-8902', 'Mia Garcia', 'I was attacked!', 'Victim', '1979-10-25', 'Female', 13),
+('456-78-9013', 'Nathan Young', 'He stole my laptop!', 'Survivor', '1987-03-30', 'Male', 14),
+('567-89-0124', 'Olivia Martinez', 'She assaulted me!', 'Victim', '1981-06-05', 'Female', 15),
+('678-90-1235', 'Paul Robinson', 'I was mugged!', 'Victim', '1989-09-10', 'Male', 16),
+('789-01-2346', 'Quinn White', 'He broke into my house!', 'Survivor', '1977-12-20', 'Female', 17),
+('890-12-3457', 'Ryan King', 'They threatened me with a gun!', 'Victim', '1993-01-25', 'Male', 18),
+('901-23-4568', 'Samantha Adams', 'I was attacked by a gang!', 'Victim', '1986-04-01', 'Female', 19),
+('012-34-5679', 'Tyler Scott', 'He stole my wallet!', 'Survivor', '1994-07-10', 'Male', 20);
 
 --
 -- table for victim_injuries
@@ -501,26 +501,26 @@ CREATE TABLE IF NOT EXISTS `witnesses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `witnesses` (`SSN`, `Name`, `Statement`, `DOB`, `Gender`, `crimeNo`) VALUES
-('111-22-3333', 'John Smith', 'Saw the suspect fleeing the scene', '1980-01-01', 'Male', 1),
-('222-33-4444', 'Jane Doe', 'Heard loud noises before the fire started', '1985-02-02', 'Female', 2),
-('333-44-5555', 'Bob Johnson', 'Noticed suspicious activity near the house', '1990-03-03', 'Male', 3),
-('444-55-6666', 'Alice Brown', 'Saw the victim arguing with the suspect', '1975-04-04', 'Female', 4),
-('555-66-7777', 'Charlie Davis', 'Observed the suspect using a fake ID', '1982-05-05', 'Male', 5),
-('666-77-8888', 'Emily Wilson', 'Witnessed the suspect forcing the victim into a car', '1995-06-06', 'Female', 6),
-('777-88-9999', 'Frank Thomas', 'Saw a handoff of suspicious packages', '1988-07-07', 'Male', 7),
-('888-99-0000', 'Grace Martinez', 'Saw a group of people with the victim', '1992-08-08', 'Female', 8),
-('999-00-1111', 'Henry Lee', 'Heard an explosion from a nearby building', '1978-09-09', 'Male', 9),
-('000-11-2222', 'Isabella Harris', 'Received threatening messages from the suspect', '1986-10-10', 'Female', 10),
-('111-22-3334', 'Jack Walker', 'Noticed unusual online activities', '1991-11-11', 'Male', 11),
-('222-33-4445', 'Karen Hall', 'Saw the suspect meeting with known criminals', '1984-12-12', 'Female', 12),
-('333-44-5556', 'Larry King', 'Heard cries for help from the house', '1979-01-13', 'Male', 13),
-('444-55-6667', 'Mary Scott', 'Identified the suspect from a previous encounter', '1983-02-14', 'Female', 14),
-('555-66-7778', 'Nick Adams', 'Observed the suspect making purchases with fake money', '1994-03-15', 'Male', 15),
-('666-77-8889', 'Olivia Clark', 'Saw the suspect transporting weapons', '1996-04-16', 'Female', 16),
-('777-88-9990', 'Peter Lewis', 'Noticed suspicious cargo being unloaded', '1987-05-17', 'Male', 17),
-('888-99-0001', 'Quinn Robinson', 'Heard gunshots during a gang altercation', '1989-06-18', 'Female', 18),
-('999-00-1112', 'Rachel Young', 'Noticed someone using stolen identity details', '1990-07-19', 'Female', 19),
-('000-11-2223', 'Steve Allen', 'Saw the suspect attacking the victim', '1981-08-20', 'Male', 20);
+('111-22-3333', 'Liam Murphy', 'Saw the suspect fleeing the scene', '1980-01-01', 'Male', 1),
+('222-33-4444', 'Sophia Johnson', 'Heard loud noises before the fire started', '1985-02-02', 'Female', 2),
+('333-44-5555', 'Daniel Wilson', 'Noticed suspicious activity near the house', '1990-03-03', 'Male', 3),
+('444-55-6666', 'Emily Davis', 'Saw the victim arguing with the suspect', '1975-04-04', 'Female', 4),
+('555-66-7777', 'Michael Brown', 'Observed the suspect using a fake ID', '1982-05-05', 'Male', 5),
+('666-77-8888', 'Emma Thompson', 'Witnessed the suspect forcing the victim into a car', '1995-06-06', 'Female', 6),
+('777-88-9999', 'James Martinez', 'Saw a handoff of suspicious packages', '1988-07-07', 'Male', 7),
+('888-99-0000', 'Bob Clark', 'Saw a group of people with the victim', '1992-08-08', 'Female', 8),
+('999-00-1111', 'Noah Lewis', 'Heard an explosion from a nearby building', '1978-09-09', 'Male', 9),
+('000-11-2222', 'Ava White', 'Received threatening messages from the suspect', '1986-10-10', 'Female', 10),
+('111-22-3334', 'William Hall', 'Noticed unusual online activities', '1991-11-11', 'Male', 11),
+('222-33-4445', 'Isabella King', 'Saw the suspect meeting with known criminals', '1984-12-12', 'Female', 12),
+('333-44-5556', 'Logan Young', 'Heard cries for help from the house', '1979-01-13', 'Male', 13),
+('444-55-6667', 'Charlotte Scott', 'Identified the suspect from a previous encounter', '1983-02-14', 'Female', 14),
+('555-66-7778', 'Benjamin Walker', 'Observed the suspect making purchases with fake money', '1994-03-15', 'Male', 15),
+('666-77-8889', 'Amelia Adams', 'Saw the suspect transporting weapons', '1996-04-16', 'Female', 16),
+('777-88-9990', 'Lucas Robinson', 'Noticed suspicious cargo being unloaded', '1987-05-17', 'Male', 17),
+('888-99-0001', 'Harper Harris', 'Heard gunshots during a gang altercation', '1989-06-18', 'Female', 18),
+('999-00-1112', 'Jack Perez', 'Noticed someone using stolen identity details', '1990-07-19', 'Male', 19),
+('000-11-2223', 'Grace Lee', 'Saw the suspect attacking the victim', '1981-08-20', 'Female', 20);
 
 
 --
