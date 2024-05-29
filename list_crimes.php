@@ -150,7 +150,7 @@ require_once 'header.inc.php';
         $stmt->execute();
         $stmt->bind_result($crimeNo, $description, $date, $location, $status, $name, $witnessCount, $criminalID);
         while ($stmt->fetch()) {
-            echo "<p>" . $description . ", " . $crimeNo . ", " . $description . ", " . $date . ", " . $location
+            echo "<p>" . $description . ", " . $crimeNo . ", " . $date . ", " . $location
                 . ", " . $status . ", " . $name . ", " . $witnessCount . ", " . $criminalID . "</p>";
         }
     }
