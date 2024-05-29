@@ -12,7 +12,7 @@ if ($id === "" || $id === false || $id === null) {
 ?>
 <html>
 <head>
-    <title>Sample FBI Wanted List</title>
+    <title>Fake FBI Wanted List</title>
     <link rel="stylesheet" href="base.css">
 </head>
 <body>

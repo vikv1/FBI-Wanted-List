@@ -7,7 +7,7 @@ require_once 'config.inc.php';
 ?>
 <html>
 <head>
-    <title>Fake FBI Database</title>
+    <title>Fake list of crimes</title>
     <link rel="stylesheet" href="base.css">
 </head>
 <body>
@@ -40,7 +40,7 @@ require_once 'header.inc.php';
         $stmt->bind_result($crimeNo, $description, $date, $location, $status, $name, $witnessCount, $criminalID);
         while ($stmt->fetch()) {
             // display the crime info
-            echo "<p>" . $description . ", " . $crimeNo . ", " . $description . ", " . $date . ", " . $location 
+            echo "<p>" . $description . ", " . $crimeNo . ", " . $date . ", " . $location 
             . ", " . $status . ", " . $name . ", " . $witnessCount . ", " . $criminalID ."</p>";
         }
     }

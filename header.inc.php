@@ -10,5 +10,5 @@
     <a href="list_crimes.php">List Crimes</a>
     <a href="last_5_queries.php">Last 5 Queries</a>
 </div></div>
-<h1>FBI Most Wanted</h1>
+<h1>Fake FBI Most Wanted</h1>
 
