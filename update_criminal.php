@@ -74,7 +74,13 @@ if (!$stmt) {
                 htmlspecialchars($bounty) . ', ' . htmlspecialchars($status) . ', ' . htmlspecialchars($authorityID);
             }
             ?><br><br>
-            New Status: <input type="text" name="status">
+            New Status: 
+            <select name="status">
+                <option value="dead">Dead</option>
+                <option value="captured">Captured</option>
+                <option value="wanted">Wanted</option>
+                <option value="released">Released</option>
+            </select>
             <button type="submit">Update</button>
         </form>
     </div>
